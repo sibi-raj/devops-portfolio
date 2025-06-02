@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install htmlhint and run HTML lint
+      - name: Build / Test (optional)
         run: |
           npm install -g htmlhint
           htmlhint "**/*.html" || true
@@ -27,4 +27,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./  # this points to your repo root since it's a static site
