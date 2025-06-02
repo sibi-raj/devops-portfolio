@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -28,5 +33,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
-          user_name: sibi-raj  # your GitHub username
-          user_email: actions@github.com  # any valid email 
+          user_name: sibi-raj
+          user_email: actions@github.com
+          force_orphan: true
