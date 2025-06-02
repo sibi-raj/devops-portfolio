@@ -27,4 +27,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # this points to your repo root since it's a static site
+          publish_dir: ./
+          user_name: sibi-raj  # your GitHub username
+          user_email: actions@github.com  # any valid email 
